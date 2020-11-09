@@ -14,11 +14,13 @@ header,footer{background-color:black;color:white;display:grid; }
 #advertiser h4 {margin:1px; font-weight: 300;}
 #logo h2 {margin:0px;}
 header {
+  border-bottom: 1px solid #333;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
   "nav-sm logo login-checkout";}
+  #login-checkout, #nav-sm {display:flex; justify-content:space-around;}
 
   footer {
     background-color:black;
@@ -47,23 +49,37 @@ header img {width:auto; height:26px; padding:5px;}
 }
 @media screen and (min-width: 768px) {
 .nav-md { display: flex; justify-items: center;}
-    .hide-on-tablet, .hide-on-desktop {display:none;}
+    .hide-on-tablet, .hide-on-desktop, #nav-sm {display:none;}
       header {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-template-rows: auto;
       grid-template-areas: 
-    "logo nav-md nav-md login-checkout";}
+    "logo nav-md nav-md nav-md login-checkout";}
     footer{
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr ;
       grid-template-rows: auto;
       grid-template-areas: 
     "social-media social-media social-media social-media social-media "
     "anmala-nyhetsbrev anmala-nyhetsbrev footer-nav-1 footer-nav-2 footer-nav-3";}
+    #nav li {float:left;
+      list-style-type:none; }
+      #nav{
+        padding:0px;
+        justify-content:space-between;
+        display:flex;}
+        #logo {display:flex; align-items: center; padding-left:10px;}
+        
+        header img {
+          width: auto;
+          height: 30;
+          padding: 5px;
+      }
   }
 
-  @media screen and (min-width: 980px) {
+  @media screen and (min-width: 1024px) {
     container {width:90%; margin: auto;
-      
-    }
+    }}
+
+   
