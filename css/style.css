@@ -1,0 +1,69 @@
+body {font-family: calibri; margin-top:0px;}
+content { background-color:white;}
+
+container {
+   
+    display: grid;
+    /* gap:2%; */
+    /* width:90%; */
+ grid-template-columns: 1fr;
+}
+
+header,footer{background-color:black;color:white;display:grid; }
+#advertiser {background-color:black; color:white; text-align:center;}
+#advertiser h4 {margin:1px; font-weight: 300;}
+#logo h2 {margin:0px;}
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+  "nav-sm logo login-checkout";}
+
+  footer {
+    background-color:black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "social-media social-media"
+  "anmala-nyhetsbrev anmala-nyhetsbrev"
+  "footer-nav-1 footer-nav-2";}
+
+#social-media {grid-area:social-media;}
+#footer-nav-1{grid-area:footer-nav-1;}
+#footer-nav-2{grid-area:footer-nav-2;}
+#footer-nav-3{grid-area:footer-nav-3;}
+#anmala-nyhetsbrev{grid-area:anmala-nyhetsbrev;}
+#logo {grid-area:logo;}
+#nav-md {grid-area:nav-md;}
+#login-checkout{grid-area:login-checkout;}
+#nav-sm {grid-area:nav-sm;}
+
+header img {width:auto; height:26px; padding:5px;}
+
+@media screen and (max-width: 767px) {
+    .hide-on-mobile {display:none;}
+}
+@media screen and (min-width: 768px) {
+.nav-md { display: flex; justify-items: center;}
+    .hide-on-tablet, .hide-on-desktop {display:none;}
+      header {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: 
+    "logo nav-md nav-md login-checkout";}
+    footer{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: 
+    "social-media social-media social-media social-media social-media "
+    "anmala-nyhetsbrev anmala-nyhetsbrev footer-nav-1 footer-nav-2 footer-nav-3";}
+  }
+
+  @media screen and (min-width: 980px) {
+    container {width:90%; margin: auto;
+      
+    }
