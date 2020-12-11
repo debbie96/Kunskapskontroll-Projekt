@@ -43,7 +43,11 @@ header {
           justify-content: center;}
 
 
-h2 {color:white;}
+#information{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          }
 
 /* footer */
 button, #email, label {width:100%; padding:5px; margin-bottom:10px;}
@@ -130,6 +134,7 @@ footer ul {list-style-type:none;     padding-inline-start:0px;}
   width: 100%;
   height: 100%;
   overflow: auto; 
+  z-index: 1;
   background-color: rgba(0,0,0,0.4);
 }
 
@@ -154,8 +159,26 @@ footer ul {list-style-type:none;     padding-inline-start:0px;}
   text-decoration: none;
 }
 
+.carousel img{width:100%; height:200px;}
 
 
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
 
 
 
@@ -217,7 +240,7 @@ input[type=text]{padding: 5px;
           height: 30;
           padding-top:20px;}
           
-         
+          .carousel img{height:800px;}
 
           
           .kontakt-form{width:30%;}
@@ -226,8 +249,9 @@ input[type=text]{padding: 5px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
-        grid-template-areas: 
-        "information carousel"
+        grid-template-areas:
+        "information information" 
+        "carousel carousel"
       "redken nyheter2"
       "oribe rea1"
       "rea2 nyheter1"
