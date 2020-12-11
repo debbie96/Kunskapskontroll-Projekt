@@ -19,11 +19,16 @@ header {
     grid-template-areas: 
   "nav-sm logo login-checkout";}
   #login-checkout, #nav-sm {display:flex; justify-content:space-evenly;}
+
+  #user-modal-btn,#kassa-modal-btn,#search-modal-button, #meny-modal-button{margin:5px 3px;border-radius: 5px;
+    color: white; background-color:#333;}
+
   #nav li{  display: block;
     color: white;
     text-align: center;
     padding: 16px;
-    text-decoration: none;}
+    text-decoration: none;
+  font-weight: 800;}
     #nav li a{   text-decoration: none;color:white;}
     #nav li:hover{background-color:grey;}
     #nav{
@@ -50,10 +55,10 @@ header {
           }
 
 /* footer */
-button, #email, label {width:100%; padding:5px; margin-bottom:10px;}
+#anmala-nyhetsbrev button, #email, label {width:100%; padding:5px; margin-bottom:10px;}
 footer ul {list-style-type:none;     padding-inline-start:0px;}
-    footer img { width:30px; height:30px; }
-      #social-media { display:flex; justify-content: space-around; }
+    footer img { width:60px; }
+      #social-media { display:flex; justify-content: space-around;}
   footer div {     display: flex; margin-bottom:15px;
     justify-content: center;}
   footer {
@@ -67,7 +72,7 @@ footer ul {list-style-type:none;     padding-inline-start:0px;}
   "anmala-nyhetsbrev anmala-nyhetsbrev"
   "footer-nav-1 footer-nav-2";}
 
-#social-media {grid-area:social-media; margin-left:38px;}
+#social-media {grid-area:social-media;}
 #footer-nav-1{grid-area:footer-nav-1;}
 #footer-nav-2{grid-area:footer-nav-2;}
 #footer-nav-3{grid-area:footer-nav-3;}
@@ -118,22 +123,20 @@ footer ul {list-style-type:none;     padding-inline-start:0px;}
 
 #produkt-sida{flex-flow:row; justify-content: space-evenly;display:flex; flex-wrap:wrap; background-color:white;}
 #produkt-sida img {width:150px;}
-.produkt {margin:5px;}
-.produkt-namn{text-align:center; margin-bottom:10px;}
-.produkt-pris {width:50%; float:left;margin-top:5px;}
-.produkt-btn{width:50%;float:left;}
+.produkt {background-color: lightgrey;}
+.produkt-namn{text-align:center; margin-bottom:10px;font-size:30px;}
+.produkt-pris { float:left;margin-top:5px; margin-left: 15px;margin-bottom: 10px;}
+
+.produkt-btn button{float:right;margin-right: 15px;}
 
 
 
-
-.modal {
+.modal, .modal1, .modal2, .modal3 {
   display: none;
   position: fixed;
   left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto; 
   z-index: 1;
   background-color: rgba(0,0,0,0.4);
 }
@@ -147,17 +150,25 @@ footer ul {list-style-type:none;     padding-inline-start:0px;}
 }
 
 
-.close {
+.close,.close1, .close2, .close3 {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 .close:hover,
-.close:focus {
+.close:focus,.close1:hover,
+.close1:focus,.close2:hover,
+.close2:focus,.close3:hover,
+.close3:focus   {
   color: black;
   text-decoration: none;
 }
+
+
+
+
+
 
 .carousel img{width:100%; height:200px;}
 
@@ -191,7 +202,7 @@ footer ul {list-style-type:none;     padding-inline-start:0px;}
 
 
 
-
+#content-produkt{background-color:white;}
 #content-kontakt{
   background-color: white;
 display: flex;
@@ -199,12 +210,19 @@ align-items: center;
 justify-content: center;
 }
 .kontakt-form{background-color:white; width:100%;padding:20px;}
-input[type=text], .boxed textarea {width:100%; border-radius:5px;}
-input[type=text]{padding: 5px;
+input[type=text], .boxed textarea, input[type="password"], input[type="email"] {width:100%; border-radius:5px;}
+input[type=text], input[type="password"],input[type="email"] {padding: 5px;
   margin: 5px 0px;}
   .kontakt-form h3 {margin-top:0px;}
   textarea{margin: 10px 0px;}
 .kontakt-form button {border-radius:5px;}
+.boxed button, .modal-content button,   { border-radius: 5px; color:white; background-color:black;}
+.boxed button {float:right;}
+#newuser {display:none;}
+
+
+
+
 
 
 
@@ -239,11 +257,30 @@ input[type=text]{padding: 5px;
           width: auto;
           height: 30;
           padding-top:20px;}
+
+          .produkt:hover {font-weight: 800;}
+          .produkt button:hover{background-color:darkolivegreen;} 
+
+          .produkt:hover {background-color: grey;}
+          #produkt-sida {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;}
+            #produkt-sida img {width:320px;}
           
           .carousel img{height:800px;}
 
-          
+          .boxed {    width: 50%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .modal-content {width:50%;}
           .kontakt-form{width:30%;}
+          #user-modal-btn,#kassa-modal-btn, #meny-modal-button , #search-modal-button{
+            height: 35px;
+            margin-top: 22px;
+            margin-bottom:0px;
+        }
 
       #content-home {
         display: grid;

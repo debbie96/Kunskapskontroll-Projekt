@@ -1,8 +1,3 @@
-
-
-
-
-
 var slideIndex = 0;
 showSlides();
 
@@ -42,3 +37,43 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+
+var modal1 = document.getElementById("kassa-modal");
+
+var btn = document.getElementById("kassa-modal-btn");
+
+var span = document.getElementsByClassName("close1")[0];
+
+btn.onclick = function() {
+  modal1.style.display = "block";
+}
+
+
+span.onclick = function() {
+  modal1.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
+}
+
+
+
+
+
+function openUser(loginNewUser) {
+  var i;
+  var x = document.getElementsByClassName("loginornewuser");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(loginNewUser).style.display = "block";  
+}
+
+
+
