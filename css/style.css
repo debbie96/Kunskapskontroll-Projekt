@@ -1,15 +1,13 @@
-body {font-family: calibri; margin-top:0px;}
-content { background-color:white;}
-
-container {
-   
-    display: grid;
-    /* gap:2%; */
-    /* width:90%; */
- grid-template-columns: 1fr;
+@font-face {
+  font-family: Romanesco-regular;
+  src: url(../font/OFL.txt);
 }
-
-header,footer{background-color:black;color:white;display:grid; }
+body {font-family: calibri; margin:0px; background-color:black;}
+#content-home { background-color:white;}
+container {display: grid;
+ grid-template-columns: 1fr;}
+    /* header */
+    header,footer{background-color:black;color:white;display:grid;}
 #advertiser {background-color:black; color:white; text-align:center;}
 #advertiser h4 {margin:1px; font-weight: 300;}
 #logo h2 {margin:0px;}
@@ -20,11 +18,44 @@ header {
     grid-template-rows: auto;
     grid-template-areas: 
   "nav-sm logo login-checkout";}
-  #login-checkout, #nav-sm {display:flex; justify-content:space-around;}
+  #login-checkout, #nav-sm {display:flex; justify-content:space-evenly;}
+  #nav li{  display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;}
+    #nav li a{   text-decoration: none;color:white;}
+    #nav li:hover{background-color:grey;}
+    #nav{
+      padding:0px;
+      justify-content:space-between;
+      display:flex;}
+      #logo {display:flex; align-items: center;     justify-content: center;}
 
+     
+      header img {
+        width: auto;
+        height: 30;
+        padding-top:5px;}
+      
+        #rea1 {display: flex;
+          align-items: center;
+          justify-content: center;}
+
+
+h2 {color:white;}
+
+/* footer */
+button, #email, label {width:100%; padding:5px; margin-bottom:10px;}
+footer ul {list-style-type:none;     padding-inline-start:0px;}
+    footer img { width:30px; height:30px; }
+      #social-media { display:flex; justify-content: space-around; }
+  footer div {     display: flex; margin-bottom:15px;
+    justify-content: center;}
   footer {
     background-color:black;
     display: grid;
+    margin: 20px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
@@ -32,7 +63,7 @@ header {
   "anmala-nyhetsbrev anmala-nyhetsbrev"
   "footer-nav-1 footer-nav-2";}
 
-#social-media {grid-area:social-media;}
+#social-media {grid-area:social-media; margin-left:38px;}
 #footer-nav-1{grid-area:footer-nav-1;}
 #footer-nav-2{grid-area:footer-nav-2;}
 #footer-nav-3{grid-area:footer-nav-3;}
@@ -41,14 +72,132 @@ header {
 #nav-md {grid-area:nav-md;}
 #login-checkout{grid-area:login-checkout;}
 #nav-sm {grid-area:nav-sm;}
+#information{grid-area:information;}
+ #carousel{grid-area:carousel;}
+ #nyheter1{grid-area:nyheter1;}
+ #rea1{grid-area:rea1;}
+ #nyheter2{grid-area:nyheter2;}
+ #rea2{grid-area:rea2;}
+ #oribe{grid-area:oribe;}
+ #redken{grid-area:redken;}
+ #images{grid-area:images;}
 
-header img {width:auto; height:26px; padding:5px;}
+
+
+ #content-home {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "carousel"
+"information"
+"rea2"
+"rea1"
+"nyheter2"
+"redken"
+"images"
+"tips"
+"nyheter1"
+"oribe"
+;}
+
+#nyheter1 img, #nyheter2 img {width: 25%;margin:4%;}
+#nyheter1 {background-color:#084c51; text-align:center;}
+#nyheter2  {background-color:#791a27; text-align:center;}
+#rea1{text-align: center; font-family:romanesco-regular; background-color:black; color:white;}
+#rea2 {background-color:#242479; text-align:center;}
+#rea2 img{width:38%; margin:5%;}
+#oribe img, #redken img{width:100%;}
+#images {display:flex;}
+#images img {width:33%;}
+
+
+#produkt-sida{flex-flow:row; justify-content: space-evenly;display:flex; flex-wrap:wrap; background-color:white;}
+#produkt-sida img {width:150px;}
+.produkt {margin:5px;}
+.produkt-namn{text-align:center; margin-bottom:10px;}
+.produkt-pris {width:50%; float:left;margin-top:5px;}
+.produkt-btn{width:50%;float:left;}
+
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto; 
+  padding: 20px;
+  border: 1px solid black;
+  width: 80%;
+}
+
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#content-kontakt{
+  background-color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.kontakt-form{background-color:white; width:100%;padding:20px;}
+input[type=text], .boxed textarea {width:100%; border-radius:5px;}
+input[type=text]{padding: 5px;
+  margin: 5px 0px;}
+  .kontakt-form h3 {margin-top:0px;}
+  textarea{margin: 10px 0px;}
+.kontakt-form button {border-radius:5px;}
+
+
 
 @media screen and (max-width: 767px) {
     .hide-on-mobile {display:none;}
+
+
+
+
+
+
+
+
 }
 @media screen and (min-width: 768px) {
-.nav-md { display: flex; justify-items: center;}
+  #logo {  padding-left: 10px;justify-content: start;}.nav-md { display: flex; justify-items: center; }
     .hide-on-tablet, .hide-on-desktop, #nav-sm {display:none;}
       header {
       display: grid;
@@ -58,28 +207,35 @@ header img {width:auto; height:26px; padding:5px;}
     "logo nav-md nav-md nav-md login-checkout";}
     footer{
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr ;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
       grid-template-rows: auto;
       grid-template-areas: 
-    "social-media social-media social-media social-media social-media "
+    ". social-media social-media social-media ."
     "anmala-nyhetsbrev anmala-nyhetsbrev footer-nav-1 footer-nav-2 footer-nav-3";}
-    #nav li {float:left;
-      list-style-type:none; }
-      #nav{
-        padding:0px;
-        justify-content:space-between;
-        display:flex;}
-        #logo {display:flex; align-items: center; padding-left:10px;}
-        
-        header img {
+         header img {
           width: auto;
           height: 30;
-          padding: 5px;
-      }
+          padding-top:20px;}
+          
+         
+
+          
+          .kontakt-form{width:30%;}
+
+      #content-home {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "information carousel"
+      "redken nyheter2"
+      "oribe rea1"
+      "rea2 nyheter1"
+      "images images"
+      ;}
+      
   }
 
-  @media screen and (min-width: 1024px) {
-    container {width:90%; margin: auto;
-    }}
-
    
+
+ 
