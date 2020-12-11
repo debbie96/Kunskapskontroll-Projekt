@@ -16,6 +16,9 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";  
   setTimeout(showSlides, 4000); 
 }
+
+
+
 var modal = document.getElementById("user-modal");
 
 var btn = document.getElementById("user-modal-btn");
@@ -59,6 +62,59 @@ span.onclick = function() {
 window.onclick = function(event) {
   if (event.target == modal1) {
     modal1.style.display = "none";
+  }
+}
+
+
+
+var modal2 = document.getElementById("meny-modal");
+
+var btn = document.getElementById("meny-modal-btn");
+
+var span = document.getElementsByClassName("close2")[0];
+
+btn.onclick = function() {
+  modal2.style.display = "block";
+}
+
+
+span.onclick = function() {
+  modal2.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal2.style.display = "none";
+  }
+}
+
+
+
+
+
+
+
+
+var modal3 = document.getElementById("search-modal");
+
+var btn = document.getElementById("search-modal-btn");
+
+var span = document.getElementsByClassName("close3")[0];
+
+btn.onclick = function() {
+  modal3.style.display = "block";
+}
+
+
+span.onclick = function() {
+  modal3.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal3) {
+    modal3.style.display = "none";
   }
 }
 

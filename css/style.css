@@ -3,7 +3,7 @@
   src: url(../font/OFL.txt);
 }
 body {font-family: calibri; margin:0px; background-color:black;}
-#content-home { background-color:white;}
+#content-home, #content-tips{ background-color:white;}
 container {display: grid;
  grid-template-columns: 1fr;}
     /* header */
@@ -29,7 +29,7 @@ header {
     padding: 16px;
     text-decoration: none;
   font-weight: 800;}
-    #nav li a{   text-decoration: none;color:white;}
+    #nav li a, a{   text-decoration: none;color:white;}
     #nav li:hover{background-color:grey;}
     #nav{
       padding:0px;
@@ -121,14 +121,18 @@ footer ul {list-style-type:none;     padding-inline-start:0px;}
 #images img {width:33%;}
 
 
-#produkt-sida{flex-flow:row; justify-content: space-evenly;display:flex; flex-wrap:wrap; background-color:white;}
-#produkt-sida img {width:150px;}
+#produkt-sida,#rea-sida{flex-flow:row; justify-content: space-evenly;display:flex; flex-wrap:wrap; background-color:white;}
+#produkt-sida img,.product img {width:150px;}
 .produkt {background-color: lightgrey;}
 .produkt-namn{text-align:center; margin-bottom:10px;font-size:30px;}
-.produkt-pris { float:left;margin-top:5px; margin-left: 15px;margin-bottom: 10px;}
+#content-produkt .produkt-pris { float:left;margin-top:5px; margin-left: 15px;margin-bottom: 10px;}
 
-.produkt-btn button{float:right;margin-right: 15px;}
+#content-produkt .produkt-btn button{float:right;margin-right: 15px;}
 
+
+#content-rea .produkt-btn button{margin-right: 15px; float:right;}
+#content-rea .produkt-pris {opacity:0.8; text-decoration:line-through; float:left;}
+#content-rea .produkt-pris-rea {font-weight:800; float:left;}
 
 
 .modal, .modal1, .modal2, .modal3 {
@@ -202,7 +206,7 @@ footer ul {list-style-type:none;     padding-inline-start:0px;}
 
 
 
-#content-produkt{background-color:white;}
+#content-produkt, #content-rea{background-color:white;}
 #content-kontakt{
   background-color: white;
 display: flex;
@@ -216,7 +220,7 @@ input[type=text], input[type="password"],input[type="email"] {padding: 5px;
   .kontakt-form h3 {margin-top:0px;}
   textarea{margin: 10px 0px;}
 .kontakt-form button {border-radius:5px;}
-.boxed button, .modal-content button,   { border-radius: 5px; color:white; background-color:black;}
+.boxed button, .modal-content button  {border-radius:5px; color:white; background-color:black;}
 .boxed button {float:right;}
 #newuser {display:none;}
 
@@ -262,11 +266,11 @@ input[type=text], input[type="password"],input[type="email"] {padding: 5px;
           .produkt button:hover{background-color:darkolivegreen;} 
 
           .produkt:hover {background-color: grey;}
-          #produkt-sida {
+          #produkt-sida, #rea-sida {
             width: 80%;
             margin-left: auto;
             margin-right: auto;}
-            #produkt-sida img {width:320px;}
+            #produkt-sida img, #rea-sida img {width:320px;}
           
           .carousel img{height:800px;}
 
